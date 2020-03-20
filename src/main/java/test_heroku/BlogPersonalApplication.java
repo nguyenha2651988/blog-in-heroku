@@ -45,9 +45,10 @@ public class BlogPersonalApplication {
     }
     @Configuration
     static class WebConfig implements WebMvcConfigurer, ApplicationContextAware {
-
+        private ApplicationContext appContext;
         @Override
         public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
+            appContext = applicationContext;
         }
 
 
