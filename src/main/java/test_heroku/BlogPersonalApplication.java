@@ -24,7 +24,6 @@ public class BlogPersonalApplication {
         SpringApplication.run(BlogPersonalApplication.class, args);
     }
 
-
     @Configuration
     public class CorsConfig  {
 
@@ -43,7 +42,6 @@ public class BlogPersonalApplication {
             };
         }
     }
-
     @Bean
     public UserDetailsService userDetailsService(){
         return new UserDetailsServiceImpl();
