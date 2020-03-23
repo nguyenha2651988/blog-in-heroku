@@ -25,36 +25,42 @@ public class BlogPersonalApplication {
     }
 
     @Bean
-    public UserDetailsService userDetailsService(){
+    public UserDetailsService userDetailsService() {
         return new UserDetailsServiceImpl();
     }
+
     @Bean
     public UserService userService() {
         return new UserServiceImpl();
     }
+
     @Bean
-    public CategoryService categoryService() {return new CategoryServiceImpl();
+    public CategoryService categoryService() {
+        return new CategoryServiceImpl();
     }
+
     @Bean
-    public CommentService commentService() {return new CommentServiceImpl();
+    public CommentService commentService() {
+        return new CommentServiceImpl();
     }
+
     @Bean
     public PictureService pictureService() {
         return new PictureServiceImpl();
     }
 
     @Bean
-    public RoleService roleService(){
+    public RoleService roleService() {
         return new RoleServiceImpl();
     }
+
     @Configuration
     static class WebConfig implements WebMvcConfigurer, ApplicationContextAware {
         private ApplicationContext appContext;
+
         @Override
         public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
             appContext = applicationContext;
         }
-
-
     }
 }
